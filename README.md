@@ -1,6 +1,6 @@
 # ERROR404-2
 ### Equipo: 
-- Berrrones Ávila Iñaqui, 
+- Berrrones Ávila Iñaqui Emiliano 2274523
 - Morales Maldonado Isis Amithaba Madai, 2195272.
 
 ### Pregunta de investigación: 
