@@ -10,3 +10,21 @@ bus_params = {
     "api_key": api_key,
     "hl": "es"
 }
+#==================================================================
+try:
+  response = requests.get(url, params=bus_params)
+  if response.status_code == 200:
+    print("Conexión exitosa")
+  else:
+    print("Error en la API:", response.status_code)
+except Exception as fries:
+  print("Error de conexión:", fries)
+  
+#==============================================================
+if response.status_code == 200:
+  data = response.json()
+
+    with open("data/raw/answer.json", "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=4)
+else:
+    print("Error:", response.status_code)
