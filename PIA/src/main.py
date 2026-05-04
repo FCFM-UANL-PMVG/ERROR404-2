@@ -3,7 +3,7 @@ import re
 import json
 import os
 from Cleaner import limpiar_articulo
-from validators import es_enlace_valido
+from Validators import es_enlace_valido
 from api_client import get_data
 
 url = "https://serpapi.com/search.json"
