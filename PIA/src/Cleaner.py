@@ -13,8 +13,12 @@ def limpiar_articulo(articulo):
     else:
         autores_limpios = ["Desconocido"]
 
+   tipo = articulo.get("type")
+    if tipo is None:
+        tipo = "Otros"
+        
     limpio = {
-        "tipo": articulo.get("type"),
+        "tipo": tipo,
         "autores": autores_limpios
         }
     return limpio
