@@ -12,13 +12,13 @@ def limpiar_articulo(articulo):
                  autores_limpios.append(nombre)
     else:
         autores_limpios = ["Desconocido"]
-
-   tipo = articulo.get("type")
+        
+    tipo = articulo.get("type")
     if tipo is None:
         tipo = "Otros"
         
     limpio = {
-        "tipo": tipo,
+        "tipo": str(tipo),
         "autores": autores_limpios
         }
     return limpio
