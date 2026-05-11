@@ -118,6 +118,14 @@ def graficas():
         plt.plot(fechas_investigadas, formatos_año["Otros"], label="Otros")
         plt.savefig("figures/plot_formatos.png")
 
+
+        plt.figure()
+        plt.title("Publicaciones por año")
+        plt.xlabel("Años")
+        plt.ylabel("Cantidad")
+        plt.bar(publicaciones, fechas_investigadas, color="pink")
+        
+        
         plt.show()
         
     except FileNotFoundError:
