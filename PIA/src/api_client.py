@@ -3,7 +3,7 @@ import json
 import os
 
 
-def get_data(url, etro):
+def get_data(url, etro, fecha, pagina):
     try:
         response = requests.get(url, params=etro)
 
@@ -11,7 +11,6 @@ def get_data(url, etro):
             print("Conexión exitosa")
             data = response.json()
             crudo = data.get("organic_results", [])
-
             publicaciones = data.get("search_information") or {}
             pub = publicaciones.get("data_results")
 
@@ -20,7 +19,7 @@ def get_data(url, etro):
             with open(ruta, "a", encoding="utf-8") as f:
                 json.dump(crudo, f, indent=4)
                 f.write("\n")
-            print("Json creado")
+                print(f"Página guardada, artículos: {pagina}, año: {fecha}")
 
             return crudo, pub, True
 
